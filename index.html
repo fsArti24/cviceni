@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kolosalon</title>
+</head>
+<body>
+<form id="kolaForm">
+    <h3>Vyberte typ kola a počet kusů:</h3>
+    <div>
+        <input type="checkbox" id="horske" name="kolo" value="500"><label>Horské (500 Kč/den)</label>
+        <label>Počet ks:</label><input type="number" id="horskeMnoz" min="0" value="0">
+    </div>
+    <div>
+        <input type="checkbox" id="detske" name="kolo" value="200"><label>Dětské (200 Kč/den)</label>
+        <label>Počet ks</label><input type="number" id="detskeMnoz" min="0" value="0">
+    </div>
+    <div>
+        <input type="checkbox" id="silnicni" name="kolo" value="1500"><label>Silniční (1 500 Kč/den)</label>
+        <label>Počet ks</label><input type="number" id="silnicniMnoz" min="0" value="0">
+    </div>
+    <div>
+        <input type="checkbox" id="gravel" name="kolo" value="2500"><label>Gravel (2 500 Kč/den)</label>
+        <label>Počet ks</label><input type="number" id="gravelMnoz" min="0" value="0">
+    </div>
+
+    <h3>Doba zápůjčky:</h3>
+    <select id="doba">
+        <option value="5">5 dnů</option>
+        <option value="7">Týden</option>
+        <option value="14">14 dní</option>
+        <option value="30">Měsíc</option>
+    </select>
+
+    <h3>Vyberte cyklonosič:</h3>
+    <div>
+        <input type="radio" id="stresni" name="nosic" value="1.05"><label>Střešní (+5%)</label>
+    </div>
+    <div>
+        <input type="radio" id="tazny" name="nosic" value="1.1"><label>Na tažné zařízení (+10%)</label>
+    </div>
+    <div>
+        <input type="radio" id="zadny" name="nosic" value="1" checked><label>Není třeba</label>
+    </div>
+
+    <h3>Celková cena zápůjčky:</h3>
+    <button type="button" onclick="calculateTotal()">Vypočítat cenu</button>
+    <div id="celkovaCena"></div>
+    <input type="number" id="odhadCena" placeholder="Vaše cena">
+    <div id="porovnaniCena"></div>
+
+    <h3>Kontaktní email:</h3>
+    <input type="email" id="email" placeholder="email@example.com">
+    <button type="submit">Odeslat</button>
+</form>
+<script src="scripts.js"></script>
+</body>
+</html>

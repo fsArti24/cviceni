@@ -1,1 +1,1 @@
-# cviceni
+# cviceni javascript
